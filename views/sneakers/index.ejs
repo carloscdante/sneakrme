@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+
+<div id="page-container">
+
+    <div style="margin-top: 50px" id="carousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./banner.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#b2" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#b3" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <p>
+                <a class="btn btn-primary btn-large" href="/sneakers/new">Add New sneaker</a>
+             </p>
+         </div>
+     </header>
+
+     <div class="row text-align-left" style="display:flex; flex-wrap: wrap;">
+            <% for (let i = 0; i < sneakers.length; i++) { %>
+            <% var arr = []; const sneaker = sneakers[i]; sneaker['pos'] = i; for(var z=0; z < sneaker.prices.length; z++) arr.push(sneaker.prices[z].price);%>
+            <div class="col-md-3 col-sm-6">
+            <a style="color: #000000; text-decoration: none" href="/sneakers/<%= sneaker._id %>">
+                <div style="padding: 10px 0 10px 0; box-shadow: 10px 6px 20px #c7c7c7;" id="trendingthumb" class="thumbnail">
+                   <img src="<%= sneaker.image %>">
+                   <div class="caption">
+                       <h4 style="font-weight: 300; color: #171717"><%= sneaker.name %></h4>
+                       <h6 style="font-weight: 200; color: grey">Menor Preço</h6>
+                       <% %>
+                       <% %>
+                       <% %>
+                       <% %>
+                       <h5 style="font-weight: 600; color: black">R$<%= Math.min(...arr) %></h5>
+                   </div>
+                   <p>
+                       </a>
+                   </p>
+                </div>
+            </div>
+            <% } %>
+    </div>
+</div>
+</div>
+
+<% include ../partials/footer %>

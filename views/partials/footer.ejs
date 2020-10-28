@@ -1,0 +1,62 @@
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+
+  <script>
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    var $stuff = $(".scroll");
+    $stuff.toggleClass('scrolledtoo', $(this).scrollTop() > $nav.height());
+    var $logo = $("#logo");
+    $logo.toggleClass('scrolledlogo', $(this).scrollTop() > $nav.height());
+  });
+});
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
+<footer class="section footer-classic context-dark bg-image" style="background: #585858;">
+        <div class="container" style="padding-top: 20px; margin-top: 50px; padding-bottom: 20px;">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="../toow.png" alt="" width="100" height="26" srcset="../toow.png 2x"></a>
+                <p></p>
+                <!-- Rights -->
+                <p class="rights"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>Sneakr.me</span><span>. </span><span>Todos os direitos reservados.</span></p>
+                <p class="rights"><a href=""> <i class="fa fa-book" aria-hidden="true"></i> Termos de Uso</a></p>
+                <p class="rights"><a href=""> <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Termos de Privacidade</a></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5></h5>
+              <dl class="contact-list">
+                <dt><i class="fa fa-phone" aria-hidden="true"></i> (11)99999-9999</dt>
+                <dd></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt></dt>
+                <dd><a href="mailto:#"><i class="fa fa-envelope" aria-hidden="true"></i> suporte@sneakr.me</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt></dt>
+                <dd><a href="mailto:#"><i class="fa fa-inbox" aria-hidden="true"></i> Av. Xxxxxxx, Xxxxxxx, 581</a></dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h6 style="padding-top: 10px">Social</h6>
+              <ul class="nav-list">
+                <li><a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i> Instagram </a></li>
+                <li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> Facebook </a></li>
+                <li><a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+<div style="margin-bottom: 26.2em" class="page-container">
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+            <h4 style="font-weight: bold; text-align: center; padding-top: 30px">Procurar por sneakers...</h4>
+            <form action="/search" method="GET">
+                 <input style="margin-top: 30px" class="form-control form-control-lg" type="text" name="sneaker" placeholder='ex. Yeezy Boost 350 V2 "Red" '> 
+            </form>
+         </div>
+     </header>
+
+     <div class="row text-align-left" style="display:flex; flex-wrap: wrap;">
+        <% sneakers.forEach(function(sneaker){ %>
+            <div class="col-md-3 col-sm-6">
+            <a style="color: #000000; text-decoration: none" href="/sneakers/<%= sneaker._id %>">
+                <div style="padding: 10px 0 10px 0; box-shadow: 10px 6px 20px #c7c7c7;" id="trendingthumb" class="thumbnail">
+                   <img src="<%= sneaker.image %>">
+                   <div class="caption">
+                       <h4 style="font-weight: 300; color: #171717"><%= sneaker.name %></h4>
+                       <h6 style="font-weight: 200; color: grey">Menor Preço</h6>
+                       <%  %>
+                       <h5 style="font-weight: 600; color: black">0000</h5>
+                   </div>
+                   <p>
+                       </a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+                <div class="row" style="display:flex; flex-wrap: wrap;">
+            <% var arr = []; for(var z=0; z < sneaker.prices.length; z++) arr.push(sneaker.prices[z].price);%>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div style="padding: 40px 0 10px 0; margin: 0 auto" class="text-center" id="trendingthumb">
+                   <img class="img-fluid" src="<%= sneaker.image %>">
+                   <div class="caption">
+                       <h1 style="font-weight: 800; color: #171717"><%= sneaker.name %></h1>
+                       <h6 style="padding-top: 10px;font-weight: 300; color: #171717"><%= sneaker.description %></h6>
+                       <h4 style="padding-top: 20px;font-weight: 200; color: grey">Disponível em:</h4>
+                       <% %>
+                       <% %>
+                       
+                       <% for(var z=0; z < arr.length; z++){ var st = sneaker.prices[z].store;%>
+                       <h5 style="font-weight: 600; color: black"><%= st %> - R$<%= arr[z] %></h5>
+                       <% } %>
+                   </div>
+                   <p>
+                   </p>
+                </div>
+            </div>
+    </div>
+    <div class="col-sm-4"></div>
+</div>
+</div>
+
+<% include ../partials/footer %>
